@@ -16,7 +16,6 @@ protocol AuthServiceDelegate: AnyObject {
 
 class AuthService: NSObject, VKSdkDelegate, VKSdkUIDelegate {
     
-    
     private let appId =  "8015882"
     private let vkSdk: VKSdk
     
@@ -30,9 +29,13 @@ class AuthService: NSObject, VKSdkDelegate, VKSdkUIDelegate {
     
     weak var delegate: AuthServiceDelegate?
     
+    var token: String? {
+        return VKSdk.accessToken()?.accessToken
+    }
+    
     func wakeUpSession() {
-        let scope = ["offline"]
-        VKSdk.wakeUpSession(scope) { [delegate] (state, error) in
+        let scope = ["wall", "friends"]
+        VKSdk.wakeUpSession(scope) {[delegate] state, error in
             switch state {
             case .initialized:
                 print("initialized")

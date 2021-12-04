@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C88B16B1275B75CC00D2F7A1 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88B16B0275B75CC00D2F7A1 /* NetworkService.swift */; };
+		C88B16B3275B778E00D2F7A1 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88B16B2275B778E00D2F7A1 /* API.swift */; };
+		C88B16B6275B99B800D2F7A1 /* FeedResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88B16B5275B99B800D2F7A1 /* FeedResponse.swift */; };
+		C88B16B8275BA1D900D2F7A1 /* NetworkDataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88B16B7275BA1D900D2F7A1 /* NetworkDataFetcher.swift */; };
 		C8EF380F275A26C60064EECC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8EF380E275A26C60064EECC /* AppDelegate.swift */; };
 		C8EF3811275A26C60064EECC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8EF3810275A26C60064EECC /* SceneDelegate.swift */; };
 		C8EF3813275A26C60064EECC /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8EF3812275A26C60064EECC /* AuthViewController.swift */; };
@@ -21,6 +25,10 @@
 
 /* Begin PBXFileReference section */
 		031B1FA4FCF763974D0271DE /* Pods-VKNewsFeed.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VKNewsFeed.release.xcconfig"; path = "Target Support Files/Pods-VKNewsFeed/Pods-VKNewsFeed.release.xcconfig"; sourceTree = "<group>"; };
+		C88B16B0275B75CC00D2F7A1 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		C88B16B2275B778E00D2F7A1 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		C88B16B5275B99B800D2F7A1 /* FeedResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedResponse.swift; sourceTree = "<group>"; };
+		C88B16B7275BA1D900D2F7A1 /* NetworkDataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDataFetcher.swift; sourceTree = "<group>"; };
 		C8EF380B275A26C60064EECC /* VKNewsFeed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VKNewsFeed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8EF380E275A26C60064EECC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C8EF3810275A26C60064EECC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -65,6 +73,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		C88B16B4275B997D00D2F7A1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C88B16B5275B99B800D2F7A1 /* FeedResponse.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		C8EF3802275A26C60064EECC = {
 			isa = PBXGroup;
 			children = (
@@ -101,7 +117,11 @@
 		C8EF3824275A2D2C0064EECC /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				C88B16B4275B997D00D2F7A1 /* Models */,
 				C8EF3822275A2D130064EECC /* AuthService.swift */,
+				C88B16B0275B75CC00D2F7A1 /* NetworkService.swift */,
+				C88B16B2275B778E00D2F7A1 /* API.swift */,
+				C88B16B7275BA1D900D2F7A1 /* NetworkDataFetcher.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -239,11 +259,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C88B16B6275B99B800D2F7A1 /* FeedResponse.swift in Sources */,
 				C8EF3813275A26C60064EECC /* AuthViewController.swift in Sources */,
 				C8EF380F275A26C60064EECC /* AppDelegate.swift in Sources */,
 				C8EF3828275A57300064EECC /* FeedViewController.swift in Sources */,
 				C8EF3811275A26C60064EECC /* SceneDelegate.swift in Sources */,
+				C88B16B1275B75CC00D2F7A1 /* NetworkService.swift in Sources */,
+				C88B16B8275BA1D900D2F7A1 /* NetworkDataFetcher.swift in Sources */,
 				C8EF3823275A2D130064EECC /* AuthService.swift in Sources */,
+				C88B16B3275B778E00D2F7A1 /* API.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
