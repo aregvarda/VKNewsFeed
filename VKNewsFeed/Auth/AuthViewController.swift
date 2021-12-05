@@ -14,7 +14,7 @@ class AuthViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         authService = SceneDelegate.shared().authService
-        view.backgroundColor = .gray
+        view.backgroundColor = .systemFill
     }
 
     @IBAction func signinTouch(_ sender: Any) {

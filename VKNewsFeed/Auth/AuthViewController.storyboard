@@ -16,14 +16,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sje-IB-rOU">
-                                <rect key="frame" x="108.5" y="423.5" width="197" height="49"/>
+                            <button opaque="NO" tag="2" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sje-IB-rOU">
+                                <rect key="frame" x="107" y="428.5" width="200" height="39"/>
                                 <color key="backgroundColor" systemColor="secondaryLabelColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="197" id="AQo-z7-lwz"/>
-                                    <constraint firstAttribute="height" constant="49" id="Nxt-Zz-EOe"/>
+                                    <constraint firstAttribute="width" constant="200" id="RE2-lK-2rZ"/>
+                                    <constraint firstAttribute="height" constant="39" id="V3Q-QH-YgW"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="NotoSansKannada-Bold" family="Noto Sans Kannada" pointSize="25"/>
+                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="25"/>
                                 <state key="normal" title="GAIN ACCESS">
                                     <color key="titleColor" systemColor="secondarySystemBackgroundColor"/>
                                 </state>
@@ -35,8 +35,8 @@
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Sje-IB-rOU" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="Ofu-Ke-WKS"/>
-                            <constraint firstItem="Sje-IB-rOU" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="f4q-gz-i3x"/>
+                            <constraint firstItem="Sje-IB-rOU" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="BXW-QX-mhb"/>
+                            <constraint firstItem="Sje-IB-rOU" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="Nfp-hZ-o4R"/>
                         </constraints>
                     </view>
                 </viewController>

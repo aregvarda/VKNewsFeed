@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol NewsfeedDisplayLogic: class {
+protocol NewsfeedDisplayLogic: AnyObject {
   func displayData(viewModel: Newsfeed.Model.ViewModel.ViewModelData)
 }
 
@@ -16,20 +16,10 @@ class NewsfeedViewController: UIViewController, NewsfeedDisplayLogic {
 
   var interactor: NewsfeedBusinessLogic?
   var router: (NSObjectProtocol & NewsfeedRoutingLogic)?
-
-  // MARK: Object lifecycle
   
-  override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
-    super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-    setup()
-  }
-  
-  required init?(coder aDecoder: NSCoder) {
-    super.init(coder: aDecoder)
-    setup()
-  }
-  
-  // MARK: Setup
+    @IBOutlet weak var table: UITableView!
+   
+    // MARK: Setup
   
   private func setup() {
     let viewController        = self
@@ -47,14 +37,41 @@ class NewsfeedViewController: UIViewController, NewsfeedDisplayLogic {
   
 
   
-  // MARK: View lifecycle
-  
-  override func viewDidLoad() {
-    super.viewDidLoad()
-  }
-  
+    // MARK: View lifecycle
+    
+    override func viewDidLoad() {
+      super.viewDidLoad()
+      setup()
+      
+      table.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+    }
+    
   func displayData(viewModel: Newsfeed.Model.ViewModel.ViewModelData) {
-
+    
+    switch viewModel {
+    case .some:
+        print(".some ViewController")
+    case .displayNewsfeed:
+        print(".displayNewsfeed ViewController")
+    }
   }
-  
+}
+
+extension NewsfeedViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 5
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! UITableViewCell
+        cell.textLabel?.text = "index: \(indexPath.row)"
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("select row")
+        interactor?.makeRequest(request: .getFeed)
+    }
+    
 }

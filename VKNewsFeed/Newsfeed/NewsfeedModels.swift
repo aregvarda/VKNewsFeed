@@ -14,16 +14,19 @@ enum Newsfeed {
     struct Request {
       enum RequestType {
         case some
+        case getFeed
       }
     }
     struct Response {
       enum ResponseType {
         case some
+        case presentNewsfeed
       }
     }
     struct ViewModel {
       enum ViewModelData {
         case some
+        case displayNewsfeed
       }
     }
   }
