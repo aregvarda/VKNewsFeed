@@ -24,7 +24,7 @@
                                     <constraint firstAttribute="height" constant="39" id="V3Q-QH-YgW"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="25"/>
-                                <state key="normal" title="GAIN ACCESS">
+                                <state key="normal" title="GET ACCESS">
                                     <color key="titleColor" systemColor="secondarySystemBackgroundColor"/>
                                 </state>
                                 <connections>
